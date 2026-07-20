@@ -3,7 +3,7 @@ kind: KuberoApp
 metadata:
     name: libredb-studio
     annotations:
-        kubero.dev/template.architecture: "[]"
+        kubero.dev/template.architecture: '["amd64", "arm64"]'
         kubero.dev/template.description: "Modern, AI-powered open-source SQL IDE. Connect to and query PostgreSQL, MySQL, Oracle, SQL Server, SQLite, MongoDB and Redis directly from your browser, with an optional AI assistant to help write and explain queries."
         kubero.dev/template.icon: "https://raw.githubusercontent.com/libredb/libredb-studio/main/public/logo.svg"
         kubero.dev/template.installation: "On first start LibreDB Studio creates an initial admin account (ADMIN_EMAIL / ADMIN_PASSWORD) and a regular user account (USER_EMAIL / USER_PASSWORD). Set a strong JWT_SECRET (minimum 32 characters). Data is stored in a local SQLite file under /app/data by default, so no external database is required."
@@ -50,4 +50,4 @@ spec:
         containerPort: 3000
         pullPolicy: Always
         repository: ghcr.io/libredb/libredb-studio
-        tag: 0.9.27
+        tag: 0.9.59
